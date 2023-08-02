@@ -7,9 +7,14 @@ import java.io.InputStreamReader;
 public class Pro434 {
     public static int countSegments(String s) {
         int ans=0;
+        if(s.length()==0){
+            return ans;
+        }
         for(int i=0;i<s.length();i++){
-            if(s.charAt(i)==' '&&i-1>=0&&s.charAt(i-1)!=' ')
+            if(s.charAt(i)==' '&&i-1>=0&&s.charAt(i-1)!=' '){
                 ans++;
+            }
+
         }
         return s.charAt(s.length()-1)==' '?ans:ans+1;
     }
