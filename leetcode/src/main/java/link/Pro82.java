@@ -19,12 +19,16 @@ public class Pro82 {
                     p=p.next;
                 }
             }else{
-                if(newHead==null)
+                if(newHead==null){
                     newHead=p;
-                if(pre!=null)
+                }
+                if(pre!=null){
                     pre.next=p;
+                }
                 pre=p;
                 p=p.next;
+                pre.next=null;
+
             }
         }
         return newHead;
